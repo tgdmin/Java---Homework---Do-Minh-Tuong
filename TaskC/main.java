@@ -49,38 +49,3 @@ public class main {
 }
 
 
-/*import java.util.Scanner;
-
-public class main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        String pattern = sc.nextLine();
-        String text = sc.nextLine();
-
-        int pLength = pattern.length();
-        int tLength = text.length();
-
-        // Build prefix function
-        int[] pi = new int[pLength];
-        for (int i = 1, j = 0; i < pLength; i++) {
-            while (j > 0 && pattern.charAt(i) != pattern.charAt(j))
-                j = pi[j - 1];
-            if (pattern.charAt(i) == pattern.charAt(j))
-                j++;
-            pi[i] = j;
-        }
-
-        // Search for pattern in text
-        for (int i = 0, j = 0; i < tLength; i++) {
-            while (j > 0 && text.charAt(i) != pattern.charAt(j))
-                j = pi[j - 1];
-            if (text.charAt(i) == pattern.charAt(j))
-                j++;
-            if (j == pLength) {
-                System.out.print((i - pLen + 1) + " ");
-                j = pi[j - 1];
-            }
-        }
-    }
-}*/
