@@ -4,7 +4,10 @@ public class main {
     static class Node {
         int val;
         Node left, right;
-        Node(int val) { this.val = val; }
+
+        Node(int val) {
+            this.val = val;
+        }
     }
 
     public static void main(String[] args) {
@@ -13,7 +16,9 @@ public class main {
 
         while (sc.hasNextInt()) {
             int x = sc.nextInt();
-            if (x == 0) break;
+            if (x == 0) {
+                break;
+            }
             root = insert(root, x);
         }
 
@@ -26,14 +31,21 @@ public class main {
     }
 
     static Node insert(Node node, int val) {
-        if (node == null) return new Node(val);
-        if (val < node.val) node.left = insert(node.left, val);
-        else if (val > node.val) node.right = insert(node.right, val);
+        if (node == null) {
+            return new Node(val);
+        }
+        if (val < node.val) {
+            node.left = insert(node.left, val);
+        } else if (val > node.val) {
+            node.right = insert(node.right, val);
+        }
         return node;
     }
 
     static void collectLeavesInOrder(Node node, List<Integer> leaves) {
-        if (node == null) return;
+        if (node == null) {
+            return;
+        }
         collectLeavesInOrder(node.left, leaves);
         if (node.left == null && node.right == null) {
             leaves.add(node.val);
