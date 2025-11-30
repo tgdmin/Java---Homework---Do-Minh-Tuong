@@ -1,0 +1,17 @@
+# Java class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# IDE directories
+/.idea/
+/.vscode/
+/*.iml
+
+# Build output
+/out/
+/build/
+/target/
